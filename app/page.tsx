@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls, Sphere, MeshDistortMaterial } from '@react-three/drei';
 import { Rocket, ShieldCheck, Zap } from 'lucide-react';
@@ -33,9 +34,11 @@ export default function Home() {
           A unique platform built in a 3D space to exchange skills, collaborate live, and build teams effortlessly.
         </p>
         <div className="flex justify-center gap-4">
-          <button className="bg-indigo-600 hover:bg-indigo-500 text-white px-6 py-3 rounded-xl font-semibold transition flex items-center gap-2 cursor-pointer">
-            <Rocket size={20} /> Get Started
-          </button>
+          <Link href="/dashboard">
+            <button className="bg-indigo-600 hover:bg-indigo-500 text-white px-6 py-3 rounded-xl font-semibold transition flex items-center gap-2 cursor-pointer shadow-lg shadow-indigo-500/30">
+              <Rocket size={20} /> Get Started
+            </button>
+          </Link>
         </div>
       </div>
 
